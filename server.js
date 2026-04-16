@@ -1,13 +1,12 @@
 const express = require('express');
 const axios = require('axios');
 const cors = require('cors');
-require('dotenv').config();
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Use o access_token do arquivo .env ou variável de ambiente
+require('dotenv').config();
 const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
 
 app.post('/criar-pix', async (req, res) => {

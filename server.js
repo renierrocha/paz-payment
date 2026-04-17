@@ -11,7 +11,7 @@ const ACCESS_TOKEN = process.env.ACCESS_TOKEN;
 
 app.post('/criar-pix', async (req, res) => {
   const { nome, valor, inscricaoId } = req.body;
-
+//só pra salvar
   try {
     const response = await axios.post(
       'https://api.mercadopago.com/v1/payments',
